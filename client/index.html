@@ -7,6 +7,8 @@
 
     <!-- dependencies -->
     <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="bower_components/underscore/underscore.js"></script>
+
     <script>
       // YOU DO NOT NEED TO EDIT THIS CODE
       if (!/(&|\?)username=/.test(window.location.search)) {
@@ -20,13 +22,29 @@
     </script>
     <!-- your scripts -->
     <script src="env/config.js"></script>
-    <script src="scripts/app.js"></script>
+    
   </head>
   <body>
     <div id="main">
       <h1>chatterbox</h1>
       <!-- Your HTML goes here! -->
+      <!-- select room -->
+      <!-- select is inline element -->
+      <label for="roomSelect">Select Room</label>
+      <select id="roomSelect">
+        <option value="dog">Dog</option>
+      </select>
+      <!-- create room -->
+      <!-- input is inline element -->
+      <label for="room-create">Create Room</label>
+      <input type="text" id="room-create">
+      <input type="submit" value="Submit">
+      <div id="chats"></div>
+      
+      
+
+    
     </div>
-    <div id="chats"></div>
+    <script src="scripts/app.js"></script>
   </body>
 </html>
