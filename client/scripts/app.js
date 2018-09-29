@@ -6,10 +6,10 @@ class App {
   }
 
   init() {
-    $(".get-messages").on('click', function(event){
+    $('.get-messages').on('click', function(event) {
       this.fetch();
-      console.log('hi')
-    })
+      console.log('hi');
+    });
   }
 
   send(data) {
@@ -36,7 +36,7 @@ class App {
       type: 'GET',
       contentType: 'application/json',
       success: function (data) {
-        for(var i = 0; i < data.results.length; i++) {
+        for (var i = 0; i < data.results.length; i++) {
           this.renderMessage(data.results[i]);
         }
         console.log('chatterbox: Message received');
